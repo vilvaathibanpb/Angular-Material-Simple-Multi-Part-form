@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="StarterApp">
+  <head>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">   
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="libs/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/css/materialize-stepper.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body ng-controller="AppCtrl" ng-cloak>
+   
+  
+    <section id="top" layout="row">
+        <div layout="column" style="height: 60px;" layout-fill>
+            <md-toolbar style="background-color: #324258; " layout="row">             
+                        <div flex="5"></div>
+                     <md-button class="md-icon-button" aria-label="Icon" flex="15">
+                         <md-tooltip>Logo</md-tooltip>
+                       <img src="assets/Logo.png"></md-icon>
+                     </md-button>
+                     <md-input-container md-no-float class="md-accent" flex="20" style="padding-top:25px;padding-bottom:0px;margin-left:25px">                         
+                         <input ng-model="searchInput" placeholder="Search Jobs and Candidates here" style="color:wheat;padding-left:25px;margin-left:5px;font-size: 12px;">
+                     </md-input-container>
+                     <md-button class="md-icon-button header-items-border" aria-label="jobs" flex="10">
+                       <img src="assets/Jobs.png" ><b class="header-items">JOBS</b></md-icon>
+                     </md-button>
+                  <md-button class="md-icon-button header-items-border" aria-label="candidates" flex="10">
+                       <img src="assets/candidates.png" ><b class="header-items">CANDIDATES</b></md-icon>
+                     </md-button>
+                    <md-button class="md-icon-button header-items-border" aria-label="notify" flex="5">
+                       <img src="assets/notification.png" ><span class="button-badge" >2</span></md-icon>
+                     </md-button>
+                     <md-button class="md-icon-button header-items-border" aria-label="calendar" flex="5">
+                       <img src="assets/Calendar.png" ><b class="header-items"></b></md-icon>
+                     </md-button>
+                     <md-button class="md-icon-button header-items-border" aria-label="reports" flex="5">
+                       <img src="assets/Reports.png" ><b class="header-items"></b></md-icon>
+                     </md-button>
+                     <md-button class="md-icon-button header-items-border" aria-label="settings" flex="5">
+                       <img src="assets/Setting.png" ><b class="header-items"></b></md-icon>
+                     </md-button>                    
+                     <md-button class="md-icon-button border-left" aria-label="jobs" flex="5">
+                       <img src="assets/img/dp1.jpg" class="circle" height="40" width="40;"></md-icon>                       
+                     </md-button>
+                     <md-button class="md-icon-button" aria-label="jobs" flex="10">
+                       <b style="padding-left:0;" class="header-items">JOHN SMITH <i class="fa fa-caret-down"></i> </b>
+                     </md-button>
+                     <div flex="5"></div>                              
+            </md-toolbar>            
+        </div>
+    </section>
+
+    <div layout="row">
+       <div flex="10"></div>
+          <h3 flex="20">Create New Job</h3>
+            <span flex></span>
+            <md-button flex="10" class="md-raised md-primary" style="background-color: #adb3bc; height: 40px; margin:10px;">SAVE DRAFT</md-button>
+             <md-button flex="15" class="md-raised md-primary" style="background-color: #17c9a6;height: 40px; color: white; margin:10px; margin-right: 10%;">SAVE & CONTINUE</md-button>                 
+    </div>   
+   
+   <div layout="row">
+       <div flex="10"></div>
+                  <!--<md-button class="md-icon-button margin-10" aria-label="notify" flex="13" ng-repeat="(ind,i) in arr">
+                       <a ui-sref="{{ind+1}}" class="numberCircle" ui-sref-active="active">{{ind+1}}</a>
+                       <P class="head-name">{{i}}</P>
+                     </md-button>   -->
+                     <div class="mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__supporting-text">
+                                <div class="mdl-stepper-horizontal-alternative">
+                                    <div class="mdl-stepper-step" flex="13" ng-repeat="(ind,i) in arr">
+                                        <a ui-sref="{{ind+1}}" ui-sref-active="mdl-stepper-step active-step"><div class="mdl-stepper-circle"><span>{{ind+1}}</span></div></a>
+                                        <div class="mdl-stepper-title">{{i}}</div>
+                                        <div class="mdl-stepper-bar-left"></div>
+                                        <div class="mdl-stepper-bar-right"></div>
+                                    </div>   
+                                 </div>
+                            </div>
+                    </div>
+         <div flex="10"></div>                  
+    </div>   
+    <div layout="row" class="gray" layout-fill>
+       <div flex="10"></div>
+                  <div flex="50" class="white" ui-view></div>
+                  <div flex="5"></div>
+                  <div flex="25" class="pale">
+                      <h4 class="info infoh4">Do</h4>
+                      <h5 class="info infoh5">Use Common Job titles</h5>
+                      <h5 class="info infoh5">Advertise one job at a time, eg:'Nurese' not 'nurses'</h5>
+                      <h4 class="info infoh4">Don't</h4>
+                      <h5 class="info infoh5">Add detail like salary or location</h5>
+                      <h5 class="info infoh5">Include words like career fares and help wanted</h5>
+                      <h4></h4>
+                      <h5  class="info infoh5">Use accurate loaction to attract most appropriate candidates</h5>
+                  </div>
+         <div flex="10"></div>                  
+    </div>   
+    <div layout="column" class="gray footer" style="height: 40px;" layout-fill>
+        <div layout="row">
+            <div flex="10"></div>
+            <p flex="30">2017 Topjobsgulf - Cookies, Privacy and Terms</p>
+            <span flex="30"></span>
+            <p flex="20">Created with love by <a href="#" class="green1">Techniche</a></p>
+            <div flex="10"></div>                  
+        </div>
+    </div>   
+       
+        
+    <!-- Angular Material Dependencies -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-aria.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.js"></script>    
+    <script src="//cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script> 
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js">
+    <script src="libs/js/materialize-stepper.js"></script> 
+    <script src="js/app.js"></script>     
+  </body>
+</html>

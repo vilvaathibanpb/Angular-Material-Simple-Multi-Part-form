@@ -1,0 +1,62 @@
+<div layout="column" ng-cloak>
+  <md-content layout-padding>
+    <form name="projectForm">
+        <h3 class="form-head">Additional Employment Details</h3>   
+            <div layout="row">                              
+                       <md-select class="form-field" ng-model="industry" flex="40">
+                            <md-select-label style="color: lightgray">Employment Type </md-select-label>
+                            <md-option ng-value="1">Part-time</md-option>
+                            <md-option ng-value="2">Funll-Time</md-option>
+                            <md-option ng-value="3">Intern</md-option>
+                        </md-select>    
+                        <md-select class="form-field" ng-model="role" flex="40">
+                            <md-select-label style="color: lightgray">Employment Level </md-select-label>
+                            <md-option ng-value="1">Fresher</md-option>
+                            <md-option ng-value="2">Professional</md-option>
+                            <md-option ng-value="3">Freelancer</md-option>
+                        </md-select>    
+            </div>    
+            <div layout="row">                              
+                         <md-select class="form-field" ng-model="role" flex="60">
+                            <md-select-label style="color: lightgray">Education</md-select-label>
+                            <md-option ng-value="1">Bachelors</md-option>
+                            <md-option ng-value="2">Masters</md-option>
+                            <md-option ng-value="3">PhD</md-option>
+                        </md-select>      
+                        <span flex></span>
+                        <md-checkbox ng-model="filter" aria-label="Checkbox 1">
+                            <md-tooltip>Make it Mandatory field?</md-tooltip>
+                           <span class="check"> MANDATORY  </span><i class="fa fa-question-circle check1"></i>
+                        </md-checkbox>
+            </div>       
+             <div layout="row">                              
+                        <md-input-container class="md-block form-field" flex="60">
+                            <label>Preferred Nationals </label>
+                            <input ng-model="nationals">
+                        </md-input-container>    
+                        <span flex></span>
+                        <md-checkbox ng-model="filter" aria-label="Checkbox 1">
+                            <md-tooltip>Make it Mandatory field?</md-tooltip>
+                           <span class="check"> MANDATORY  </span><i class="fa fa-question-circle check1"></i>
+                        </md-checkbox>
+            </div>
+            <div layout="row">                              
+                        <md-input-container class="md-block form-field" flex="60">
+                            <label>Language </label>
+                            <input ng-model="lang">
+                        </md-input-container>    
+                        <span flex></span>
+                        <md-checkbox ng-model="filter" aria-label="Checkbox 1">
+                            <md-tooltip>Make it Mandatory field?</md-tooltip>
+                           <span class="check"> MANDATORY  </span><i class="fa fa-question-circle check1"></i>
+                        </md-checkbox>
+            </div>       
+             <div layout="column">
+                     <div layout="row">
+                        <md-button flex="20" class="md-raised md-primary" style="background-color: #adb3bc; height: 40px; margin:10px;">SAVE DRAFT</md-button>
+                        <md-button flex="30" class="md-raised md-primary" style="background-color: #17c9a6;height: 40px; color: white; margin:10px; margin-right: 10%;">SAVE & CONTINUE</md-button>                 
+                     </div>
+                </div>      
+        </form>
+    </md-content>
+</div>

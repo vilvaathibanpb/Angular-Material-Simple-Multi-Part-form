@@ -1,0 +1,68 @@
+<div layout="column" ng-cloak>
+  <md-content layout-padding>
+    <form name="projectForm">
+        <h3 class="form-head">Key Employment Details</h3>  
+            <div layout="row">                              
+                       <md-select class="form-field" ng-model="industry" flex="40" required>
+                            <md-select-label style="color: lightgray">Industry<i class="red1">*</i></md-select-label>
+                            <md-option ng-value="1">Software</md-option>
+                            <md-option ng-value="2">Hardware</md-option>
+                            <md-option ng-value="3">IT</md-option>
+                        </md-select>    
+                        <md-select class="form-field" ng-model="role" flex="40" required>
+                            <md-select-label style="color: lightgray">Job Function<i class="red1">*</i></md-select-label>
+                            <md-option ng-value="1">Admin</md-option>
+                            <md-option ng-value="2">Technical</md-option>
+                            <md-option ng-value="3">HR</md-option>
+                        </md-select>    
+            </div>
+            <md-input-container class="md-block form-field">
+                    <label>Key Skills<i class="red1">*</i></label>
+                    <input ng-model="jobtitle" required>
+            </md-input-container>  
+             <div layout="row">                              
+                       <md-select class="form-field" ng-model="from" flex="15" required>
+                            <md-select-label style="color: lightgray">Experience<i class="red1">*</i></md-select-label>
+                            <md-option ng-value="1">Software</md-option>
+                            <md-option ng-value="2">Hardware</md-option>
+                            <md-option ng-value="3">IT</md-option>
+                        </md-select>    
+                        <p flex="5" style="padding-left: 5px;">To</p>
+                        <md-select class="form-field" ng-model="to" flex="15" required>
+                            <md-select-label style="color: lightgray">Experience<i class="red1">*</i></md-select-label>
+                            <md-option ng-value="1">Admin</md-option>
+                            <md-option ng-value="2">Technical</md-option>
+                            <md-option ng-value="3">HR</md-option>
+                        </md-select>    
+                        <span flex></span>
+                        <md-checkbox ng-model="filter" aria-label="Checkbox 1">
+                            <md-tooltip>Apply Filters</md-tooltip>
+                           <span class="check"> FILTER  </span><i class="fa fa-question-circle check1"></i>
+                        </md-checkbox>
+            </div>
+            <h3 class="form-head">Annual Salary</h3>  
+            <div layout="row"> 
+                <md-input-container class="md-block form-field" flex="20">
+                    <label>From</label>
+                    <input ng-model="sal_from">
+                </md-input-container> 
+                <md-input-container class="md-block form-field" flex="20">
+                    <label>To</label>
+                    <input ng-model="sal_to">
+                </md-input-container>    
+                <md-select class="form-field" ng-model="to" flex="30" >
+                            <md-select-label style="color: lightgray; margin-top:10px;">Currency<i class="red1">*</i></md-select-label>
+                            <md-option ng-value="1">INR</md-option>
+                            <md-option ng-value="2">USD</md-option>
+                            <md-option ng-value="3">CAD</md-option>
+                        </md-select>         
+            </div>
+             <div layout="column">
+                     <div layout="row">
+                        <md-button flex="20" class="md-raised md-primary" style="background-color: #adb3bc; height: 40px; margin:10px;">SAVE DRAFT</md-button>
+                        <md-button flex="30" class="md-raised md-primary" style="background-color: #17c9a6;height: 40px; color: white; margin:10px; margin-right: 10%;">SAVE & CONTINUE</md-button>                 
+                     </div>
+                </div> 
+        </form>
+    </md-content>
+</div>

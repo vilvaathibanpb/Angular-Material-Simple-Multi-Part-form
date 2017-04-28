@@ -1,0 +1,41 @@
+<div layout="column" ng-cloak>
+  <md-content layout-padding>
+    <form name="projectForm">
+        <h3 class="form-head">Job Title and Department Details</h3>
+            <md-input-container class="md-block form-field">
+                    <label>Job Title<i class="red1">*</i></label>
+                    <input ng-model="jobtitle" required>
+            </md-input-container>            
+            <div layout="row">
+                    <md-input-container class="form-field" flex="40">
+                        <label>Department</label>
+                        <input ng-model="department">
+                    </md-input-container>
+                    <md-input-container class="form-field" flex="40">
+                        <label>Internal code</label>
+                        <input ng-model="internalCode">
+                    </md-input-container>
+            </div>
+            <h3 class="form-head">Location</h3>
+            <div layout="row">                          
+                        <!--<label>Country<i class="red1">*</i></label>    -->
+                        <md-select class="form-field" ng-model="country" flex="40">
+                            <md-select-label style="color: lightgray">Country<i class="red1">*</i></md-select-label>
+                            <md-option ng-value="1">India</md-option>
+                            <md-option ng-value="2">USA</md-option>
+                            <md-option ng-value="3">UK</md-option>
+                        </md-select>                   
+                    <md-input-container  flex="40">
+                        <label>Region,City or Zip Code<i class="red1">*</i></label>
+                        <input ng-model="city">
+                    </md-input-container>
+            </div>
+             <div layout="column">
+                     <div layout="row">
+                        <md-button flex="20" class="md-raised md-primary" style="background-color: #adb3bc; height: 40px; margin:10px;">SAVE DRAFT</md-button>
+                        <md-button flex="30" class="md-raised md-primary" style="background-color: #17c9a6;height: 40px; color: white; margin:10px; margin-right: 10%;">SAVE & CONTINUE</md-button>                 
+                     </div>
+                </div> 
+        </form>
+    </md-content>
+</div>
